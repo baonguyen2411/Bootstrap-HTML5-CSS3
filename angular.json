@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "responsive-bootstrap-html5-css3": {
+    "project-study-css": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,11 +13,11 @@
           "styleext": "scss"
         }
       },
-      "targets": {
+      "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/responsive-bootstrap-html5-css3",
+            "outputPath": "dist/project-study-css",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -27,9 +27,16 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/animate.css/animate.min.css",
+              "./node_modules/font-awesome/css/font-awesome.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/popper.js/dist/umd/popper.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -47,25 +54,32 @@
               "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "responsive-bootstrap-html5-css3:build"
+            "browserTarget": "project-study-css:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "responsive-bootstrap-html5-css3:build:production"
+              "browserTarget": "project-study-css:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "responsive-bootstrap-html5-css3:build"
+            "browserTarget": "project-study-css:build"
           }
         },
         "test": {
@@ -99,19 +113,20 @@
         }
       }
     },
-    "responsive-bootstrap-html5-css3-e2e": {
+    "project-study-css-e2e": {
       "root": "e2e/",
       "projectType": "application",
-      "targets": {
+      "prefix": "",
+      "architect": {
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "responsive-bootstrap-html5-css3:serve"
+            "devServerTarget": "project-study-css:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "responsive-bootstrap-html5-css3:serve:production"
+              "devServerTarget": "project-study-css:serve:production"
             }
           }
         },
@@ -127,5 +142,5 @@
       }
     }
   },
-  "defaultProject": "responsive-bootstrap-html5-css3"
+  "defaultProject": "project-study-css"
 }

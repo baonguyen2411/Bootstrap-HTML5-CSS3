@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Righteous');
+.navbar-brand {
+    font-family: 'Pacifico';
+    font-size: 35px;
+    color: lightcoral !important;
+}
+.nav-link {
+    font-size: 16px;
+    margin: 15px;
+    color: black !important;
+}
+
+.nav-link:hover {
+    color: #00E8E8 !important;
+}
+
+.active .nav-link {
+    color: #00E8E8 !important;
+}
+
+.menu-right-btn {
+    padding: 13px 46px;
+    margin-right: 4%;
+    background-color: transparent;
+}
+
+.menu-right-btn:hover {
+    color: white;
+    background-color: #00E8E8;
+}
+
+main {
+    .site-content {
+        background-image: url('../assets/header-title.jpeg');
+        background-attachment: fixed;
+        background-size: cover;
+        .site-title, .site-desc {
+            color: white;
+            font-family: 'Righteous';
+        }
+    
+        .site-title {
+            margin-top: 30%;
+            margin-bottom: 6%;
+            font-size: 50px;
+        }
+    
+        .site-desc {
+            font-size: 14px;
+            padding-left: 15%;
+        }
+    
+        .site-btn1 {
+            margin-left: 20%;
+            background-color: black;
+            color: white;
+        }
+    
+        .site-btn2 {
+            background-color: white;
+    
+        }
+    
+        .site-btn1, .site-btn2 {
+            margin-top: 5%;
+            margin-bottom: 40%;
+        }
+    }
+    // Section 1
+    .section-1 {
+        margin-bottom: 8%;
+        .container {
+            .card-text, .para-1 {
+                color: rgba(0, 0, 0, 0.59)
+            }
+            .heading-1 {
+                margin-top: 8%;
+            }
+            .heading-2 {
+                margin-bottom: 5%;
+                font-size: 39px;
+            }
+            .para-1 {
+                width: 60%;
+                margin-left: 20%;
+                margin-bottom: 5%;
+            }
+        }
+    }
+    // Section 2
+    .section-2 {
+        .container-fluid {
+            background-image: url('../assets/footer.jpeg');
+            background-attachment: fixed;
+            .heading-1 {
+                margin-top: 20%;
+                margin-bottom: 4%;
+                font-family: 'Righteous';
+                width: 80%;
+                color: whitesmoke;
+            }
+            .para {
+                width: 80%;
+                font-family: 'Ubuntu';
+                color: whitesmoke;
+                margin-bottom: 7%;
+            }
+            .btn {
+                margin-bottom: 15%;
+                width: 30%;
+                padding: 2% 5%;
+            }
+        }
+    }
+}
